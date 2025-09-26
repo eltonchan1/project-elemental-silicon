@@ -1,0 +1,136 @@
+:root{
+  --bg:#fbfaf8;
+  --muted:#666;
+  --accent:#1f2937;
+  --card:#fff;
+  --container:1100px;
+  --pad:20px;
+}
+*{box-sizing:border-box}
+body{font-family: 'Arial', serif; background:var(--bg); color:var(--accent); line-height:1.5; margin:0}
+.container{max-width:var(--container); margin:0 auto; padding:24px}
+.header-inner{display:flex; flex-direction:column; gap:6px; align-items:flex-start}
+.title{font-size:2rem; letter-spacing:0.5px; margin:0}
+.author{margin:0; color:var(--muted)}
+.site-header{border-bottom:1px solid #e6e2df; background:linear-gradient(180deg,rgba(255,255,255,0.6),transparent)}
+
+.toc{margin-top:18px}
+.toc ul {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 12px 0 18px 0;
+  list-style: none;
+}
+.toc.top-toc ul {
+  margin: 12px 0 0 0;
+}
+.toc a {
+  text-decoration: none;
+  color: #fff;
+  background: var(--accent);
+  padding: 10px 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border: 2px solid var(--accent);
+}
+.toc a:hover, .toc a:focus {
+  background: #fff;
+  color: var(--accent);
+  box-shadow: 0 4px 12px rgba(31,41,55,0.12);
+  border-color: var(--accent);
+}
+
+.paper{background:transparent}
+.section{margin-bottom:28px}
+.section h2{font-size:1.25rem; margin:8px 0}
+.section p {
+  margin: 8px 0;
+  text-indent: 2em;
+}
+
+.two-col{display:grid; grid-template-columns:1fr 340px; gap:18px; align-items:start}
+.portrait-fig img, .fig-row img, .large-fig img, .bohr img{width:100%; height:auto; display:block; border:1px solid #ddd; background:#fafafa}
+.fig-row{display:flex; gap:12px}
+.fig-row figure{flex:1}
+.portrait-fig{max-width:340px}
+
+.atomic-grid .info-cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px}
+.card{background:var(--card); padding:12px; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,0.04)}
+.card.wide{grid-column:span 2}
+.bohr{margin-top:12px}
+
+.props{display:grid; grid-template-columns:150px 1fr; gap:8px 24px}
+.props dt{font-weight:700}
+.large-fig{margin-top:18px}
+
+.uses-list{columns:2; gap:16px}
+.works-cited {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.05rem;
+  line-height: 2;
+  background: #fff;
+  padding: 18px 24px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.works-cited h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.works-cited ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.works-cited li {
+  margin-bottom: 16px;
+  text-align: left;
+  padding-left: 0;
+  text-indent: 0;
+  /* Hanging indent: first line normal, rest indented */
+  display: block;
+  overflow-wrap: anywhere;
+}
+.works-cited li {
+  /* Hanging indent for all lines except the first */
+  padding-left: 0;
+  text-indent: 0;
+}
+.works-cited li {
+  /* Use a pseudo-element for hanging indent */
+  position: relative;
+}
+.works-cited li {
+  /* Hanging indent using CSS */
+  padding-left: 0;
+  text-indent: 0;
+}
+.works-cited li {
+  /* Hanging indent for wrapped lines */
+  padding-left: 0;
+  text-indent: 0;
+  margin-left: 0;
+  /* Use hanging indent for all lines except the first */
+  /* This works in most browsers */
+  text-indent: -24px;
+  padding-left: 24px;
+}
+
+.site-footer{border-top:1px solid #e6e2df; margin-top:32px; padding:16px 0; color:var(--muted); font-size:0.95rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .two-col{grid-template-columns:1fr}
+  .toc ul{gap:8px}
+  .uses-list{columns:1}
+}
+
+@media print{.toc, .site-footer{display:none} body{background:white}}
