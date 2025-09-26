@@ -17,10 +17,10 @@ body{font-family: 'Arial', serif; background:var(--bg); color:var(--accent); lin
 .toc{margin-top:18px}
 .toc ul {
   display: flex;
-  gap: 16px;
+  gap: 24px 16px;
   flex-wrap: wrap;
   padding: 0;
-  margin: 12px 0 18px 0;
+    margin: 32px 0 32px 0;
   list-style: none;
 }
 .toc.top-toc ul {
