@@ -1,3 +1,10 @@
+/* Ensure Bohr model caption is left-aligned and not indented */
+.bohr .caption {
+  margin-left: 0 !important;
+  text-align: left !important;
+  text-indent: 0 !important;
+  padding-left: 0 !important;
+}
 :root{
   --bg:#fbfaf8;
   --muted:#666;
